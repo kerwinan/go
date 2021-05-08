@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"kerwinan/go/kit/log"
+	"github.com/kerwinan/go/kit/log"
 	"time"
 )
 

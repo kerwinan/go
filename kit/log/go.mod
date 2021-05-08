@@ -1,4 +1,4 @@
-module kerwinan/go/kit/log
+module github.com/kerwinan/go/kit/log
 
 go 1.13
 
