@@ -1,6 +1,7 @@
 package log
 
 import (
+	"context"
 	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"
 	"io"
@@ -41,6 +42,10 @@ type Config struct {
 type Option func(conf *Config)
 
 type Log interface {
+	Flush()
+	With(...interface{}) *Logger
+	Withf(string, string, ...interface{}) *Logger
+	Withc(context.Context, ...interface{}) context.Context
 	Debugf(string, ...interface{})
 	Infof(string, ...interface{})
 	Warnf(string, ...interface{})
